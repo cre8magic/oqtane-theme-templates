@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Version>1.0.0</Version>
+    <Authors>[Owner].Cre8magic</Authors>
+    <Company>2sic internet solutions GmbH</Company>
+    <Description>A basic Bootstrap5 best-practices CSS-variables based theme</Description>
+    <Product>[Owner].Theme.[Theme]</Product>
+    <Copyright>2sic - MIT 2025</Copyright>
+    <AssemblyName>[Owner].Theme.[Theme].Client.Oqtane</AssemblyName>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <RootNamespace>[Owner].Theme.[Theme]</RootNamespace>
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+
+  <!-- Enable this for advanced debugging -->
+  <!--<PropertyGroup>
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <CompilerGeneratedFilesOutputPath>exclude</CompilerGeneratedFilesOutputPath>
+    <DefaultItemExcludes>$(DefaultItemExcludes);exclude\**\*</DefaultItemExcludes>
+  </PropertyGroup>-->
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="9.0.5" />
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="9.0.5" />
+    <PackageReference Include="Oqtane.Client" Version="[FrameworkVersion]" />
+    <PackageReference Include="Oqtane.Shared" Version="[FrameworkVersion]" />
+  </ItemGroup>
+
+  <!-- Make sure node_modules exists, otherwise run npm ci-->
+	<Target Name="RunNpmInstallOrCi" BeforeTargets="Build" Condition="!Exists('node_modules')">
+		<Exec Command="if exist package-lock.json (npm ci) else (npm install)" />
+	</Target>
+
+	<Target Name="BuildFrontend" BeforeTargets="Build" DependsOnTargets="RunNpmInstallOrCi" Condition="'$(Configuration)' == 'Release'">
+		<Exec Command="npm run build" />
+	</Target>
+
+	<Target Name="BuildFrontendDebug" BeforeTargets="Build" DependsOnTargets="RunNpmInstallOrCi" Condition="'$(Configuration)' == 'Debug'">
+		<Exec Command="npm run dev" />
+	</Target>
+
+  <PropertyGroup>
+    <!-- there may be other elements here -->
+    <BlazorWebAssemblyEnableLinking>false</BlazorWebAssemblyEnableLinking>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
