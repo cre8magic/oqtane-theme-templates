@@ -1,0 +1,54 @@
+{
+  // config to generate template4templates from 'oqtane-theme-templates' theme template
+  "destinationPath": "Client/wwwroot/Themes/Templates/cre8magic-template-packager",
+  "source": [
+    {
+      "include": [
+        "**/*.*"
+      ],
+      "exclude": [
+        ".git/",
+        ".github/",
+        ".vs/",
+        ".vscode/",
+        "cre8magic-transformer.config.json",
+        "**/bin/",
+        "**/obj/",
+        "Client/wwwroot/Themes/",
+        "Package/*.nupkg"   
+      ]
+    }
+  ],
+  "rename": [
+    {
+      "include": [
+        "**/*.*"
+      ],
+      "replace": {
+        "ToSic.Cre8magic.Theme.Templates": "[Owner].Theme.Templates"
+      }
+    }
+  ],
+  "process": [
+    {
+      "include": [
+        "**/*.sln",
+        "**/*.csproj",
+        "**/*.md",
+        "**/*.txt",
+        "**/*.nuspec",
+        "**/*.nuspectemplate",
+        "**/*.bat",
+        "**/*.cmd",
+        "**/*.ps1",
+        "**/*.sh",
+        "template.json"
+      ],
+      "replace": {
+        "ToSic.Cre8magic.Theme.Templates": "[Owner].Theme.Templates",
+        "ToSic": "[Owner]",
+        "Cre8magic": "[Theme]"
+      }
+    }
+  ]
+}

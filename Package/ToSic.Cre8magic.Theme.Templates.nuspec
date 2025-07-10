@@ -20,7 +20,7 @@
         </dependencies>
     </metadata>
     <files>
-        <file src="..\Client\wwwroot\Themes\Templates\**\*.*" target="wwwroot\Themes\Templates" />
+        <file src="..\Client\wwwroot\Themes\Templates\**\*" target="wwwroot\Themes\Templates" />
         <file src="icon.png" target="" />
     </files>
 </package>

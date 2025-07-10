@@ -8,3 +8,4 @@
 /Package/bin
 /Package/obj
 *.nupkg
+/.vscode
