@@ -8,6 +8,7 @@ rem These extensions include: `.nupkg`, `.snupkg`, `.nuspec`, `.nupkg.sha512`, `
 for /r "..\Client\wwwroot\Themes\Templates" %%f in (*.nuspec) do ren "%%f" "%%~nf.nuspectemplate"
 
 del "*.nupkg"
+ren "%ProjectName%.nuspectemplate" "%ProjectName%.nuspec"
 "..\..\oqtane.framework\oqtane.package\nuget.exe" pack %ProjectName%.nuspec -NoDefaultExcludes -Properties targetframework=%TargetFramework%;projectname=%ProjectName%
-xcopy "*.nupkg" "..\..\oqtane.framework\Oqtane.Server\Packages\" /Y
 
+xcopy "*.nupkg" "..\..\oqtane.framework\Oqtane.Server\Packages\" /Y
