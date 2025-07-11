@@ -1,18 +1,10 @@
 # cre8magic ♾️ - Oqtane Theme Templates
 
-<img src="Package/icon.png" alt="cre8magic ♾️ - Oqtane Theme Templates" width="200" align="right"/>
+<img src="Package/icon.png" alt="cre8magic ♾️ - Oqtane Theme Templates" width="100" align="right"/>
 
-## Overview
-`cre8magic ♾️ - Oqtane Theme Templates` are designed to simplify the creation of custom themes for [Oqtane](https://www.oqtane.org). These templates provide a structured starting point for developers to generate fully functional Oqtane themes with modern best practices.
+`cre8magic ♾️ - Oqtane Theme Templates` are designed to simplify the creation of custom themes for [Oqtane](https://www.oqtane.org). 
 
-## How Theme Templates Work
-
-Oqtane Theme Templates are a collection of files with placeholders that Oqtane uses to generate a new theme. These templates are located in the `wwwroot/Themes/Templates` folder of the Oqtane installation.
-
-When creating a new theme, Oqtane uses the `Owner Name`, `Theme Name`, and the selected template to generate a source code solution. The generated solution includes:
-
-- A fully functional source code for the Oqtane theme in the `Client` project.
-- A `Package` project to deploy the theme in `Oqtane.Server` or package it into a `.nupkg` file for distribution.
+These templates provide a structured starting point for developers to generate fully functional Oqtane themes with modern best practices.
 
 ## cre8magic Theme Templates in this package
 
@@ -25,6 +17,15 @@ The `cre8magic ♾️ - Oqtane Theme Templates` package is available through the
 
 1. [GitHub Releases](https://github.com/cre8magic/oqtane-theme-templates/releases): Download the latest version of the package.
 2. [Oqtane Marketplace](https://oqtane.net): Access the package directly from the marketplace.
+
+## How Theme Templates Work
+
+Oqtane Theme Templates are a collection of files with placeholders that Oqtane uses to generate a new theme. These templates are located in the `wwwroot/Themes/Templates` folder of the Oqtane installation.
+
+When creating a new theme, Oqtane uses the `Owner Name`, `Theme Name`, and the selected template to generate a source code solution. The generated solution includes:
+
+- A fully functional source code for the Oqtane theme in the `Client` project.
+- A `Package` project to deploy the theme in `Oqtane.Server` or package it into a `.nupkg` file for distribution.
 
 ## Additional Resources
 
