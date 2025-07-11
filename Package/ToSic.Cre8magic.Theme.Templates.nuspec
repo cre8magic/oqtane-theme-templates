@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-    <metadata>
-        <id>$projectname$</id>
-        <version>1.0.0</version>
-        <authors>ToSic</authors>
-        <owners>ToSic</owners>
-        <title>Templates</title>
-        <description>[Description]</description>
-        <copyright>ToSic</copyright>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <license type="expression">MIT</license>
-        <projectUrl>https://github.com/oqtane/oqtane.framework</projectUrl>
-        <icon>icon.png</icon>
-        <tags>oqtane theme</tags>
-        <releaseNotes></releaseNotes>
-        <summary></summary>
-        <dependencies>
-            <dependency id="Oqtane.Framework" version="6.1.3" />
-        </dependencies>
-    </metadata>
-    <files>
-        <file src="..\Client\wwwroot\Themes\Templates\**\*" target="wwwroot\Themes\Templates" />
-        <file src="icon.png" target="" />
-    </files>
+  <metadata>
+    <id>$projectname$</id>
+    <version>01.00.00</version>
+    <authors>2sic internet solutions GmbH, Switzerland</authors>
+    <owners>2sic internet solutions GmbH, Switzerland</owners>
+    <title>cre8magic Theme Templates for Oqtane</title>
+    <description>This package provides a collection of Cre8magic theme templates for Oqtane, located in the `wwwroot/Themes/Templates` folder of the Oqtane installation. These templates include pre-configured files with placeholders, enabling developers to quickly and easily generate new themes for their Oqtane.</description>
+    <copyright>Copyright MIT © 2sic 2025</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://cre8magic.blazor-cms.org/oqtane-theme-guides/theme-templates/index.html</projectUrl>
+    <repository type="git" url="https://github.com/cre8magic/oqtane-theme-templates.git" branch="master" />
+    <icon>Package\icon.png</icon>
+    <tags>cre8magic, 2sic, Oqtane, theme, templates, CMS, web development</tags>
+    <releaseNotes>https://github.com/cre8magic/oqtane-theme-templates/releases</releaseNotes>
+    <readme>README.md</readme>
+    <summary>This package contains a set of Cre8magic theme templates for installation within Oqtane. These templates are designed to simplify the creation of new themes by providing pre-configured files with placeholders.</summary>
+    <dependencies>
+      <dependency id="Oqtane.Framework" version="6.1.3" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\Client\wwwroot\Themes\Templates\**\*" target="wwwroot\Themes\Templates" />
+    <file src="icon.png" target="Package\" />
+    <file src="..\README.md" target="" />
+  </files>
 </package>
